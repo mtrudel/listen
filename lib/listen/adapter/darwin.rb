@@ -6,7 +6,7 @@ module Listen
     # Adapter implementation for Mac OS X `FSEvents`.
     #
     class Darwin < Base
-      OS_REGEXP = /darwin(1.+)?$/i
+      OS_REGEXP = /darwin(?<major_version>(1|2)\d+)/i
 
       # The default delay between checking for changes.
       DEFAULTS = { latency: 0.1 }
